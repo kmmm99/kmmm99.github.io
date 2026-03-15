@@ -1,0 +1,108 @@
+/* ===========================================
+   Right sidebar TOC (desktop)
+   =========================================== */
+.toc-sidebar {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .toc-sidebar {
+    display: block;
+    position: fixed;
+    top: 100px;
+    right: max(calc((100vw - 720px) / 2 - 340px), 20px);
+    width: 260px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    z-index: 10;
+  }
+
+  .toc-sidebar-inner {
+    padding: 16px;
+    border-left: 2px solid var(--border);
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .toc-sidebar-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--primary);
+  }
+
+  .toc-sidebar-inner #TableOfContents ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .toc-sidebar-inner #TableOfContents ul ul {
+    padding-left: 14px;
+  }
+
+  .toc-sidebar-inner #TableOfContents li {
+    margin: 4px 0;
+  }
+
+  .toc-sidebar-inner #TableOfContents a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .toc-sidebar-inner #TableOfContents a:hover {
+    color: var(--primary);
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .toc-sidebar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .toc-sidebar::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+
+  /* Hide mobile TOC on desktop */
+  .toc-mobile {
+    display: none;
+  }
+}
+
+/* Mobile TOC: show inline (default PaperMod style) */
+@media (max-width: 1279px) {
+  .toc-mobile {
+    display: block;
+  }
+}
+
+/* ===========================================
+   Share buttons
+   =========================================== */
+.share-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+  margin-top: 16px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.share-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  transition: color 0.2s;
+}
+
+.share-buttons a:hover {
+  color: var(--primary);
+}

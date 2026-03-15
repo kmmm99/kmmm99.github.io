@@ -9,7 +9,7 @@ params:
   defaultTheme: light
   disableThemeToggle: false
   ShowReadingTime: true
-  ShowShareButtons: false
+  ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
@@ -28,6 +28,8 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/kmmm99"
+    - name: X
+      url: "https://x.com/massan_mrk"
 
   fuseOpts:
     isCaseSensitive: false
