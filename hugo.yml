@@ -22,8 +22,8 @@ params:
   author: "massan"
 
   homeInfoParams:
-    Title: "massanブログ"
-    Content: "ようこそ。技術のことなどを書いています。"
+    Title: "massan's Daily Notes"
+    Content: "長文書きたいときに使うかもしれないブログです。"
 
   socialIcons:
     - name: github
