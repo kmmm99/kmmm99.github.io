@@ -62,16 +62,10 @@ body,
 }
 
 /* ===========================================
-   Sticky header
+   Header (transparent for gradient)
    =========================================== */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
   background: transparent !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
 }
 
 /* ===========================================
@@ -147,10 +141,15 @@ body,
   }
 }
 
-/* Mobile TOC: show inline (default PaperMod style) */
+/* Mobile TOC: show inline with transparent background */
 @media (max-width: 1279px) {
   .toc-mobile {
     display: block;
+  }
+
+  .toc-mobile .toc {
+    background: transparent !important;
+    border: none;
   }
 }
 
