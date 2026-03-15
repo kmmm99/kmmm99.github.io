@@ -1,6 +1,6 @@
 baseURL: "https://kmmm99.github.io/"
 languageCode: ja
-title: "massanブログ"
+title: "massan’s Daily Notes"
 theme: "PaperMod"
 pagination:
   pagerSize: 5
