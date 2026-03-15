@@ -1,4 +1,55 @@
 /* ===========================================
+   Theme crossfade transition
+   =========================================== */
+body,
+.header,
+.main,
+.footer,
+.post-entry,
+.toc,
+.archive-entry {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.3s ease;
+}
+
+/* ===========================================
+   Mesh gradient background
+   =========================================== */
+[data-theme="light"] body {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(220, 40, 40, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(30, 160, 60, 0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 40, 60, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(40, 180, 80, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(180, 60, 70, 0.3) 0%, transparent 60%),
+    var(--theme);
+  background-attachment: fixed;
+}
+
+[data-theme="dark"] body {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(200, 200, 200, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(170, 170, 170, 0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 200, 200, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(170, 170, 170, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(200, 200, 200, 0.25) 0%, transparent 60%),
+    var(--theme);
+  background-attachment: fixed;
+}
+
+/* ===========================================
+   Sticky header
+   =========================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===========================================
    Right sidebar TOC (desktop)
    =========================================== */
 .toc-sidebar {
@@ -9,10 +60,10 @@
   .toc-sidebar {
     display: block;
     position: fixed;
-    top: 100px;
+    top: calc(var(--header-height) + 20px);
     right: max(calc((100vw - 720px) / 2 - 340px), 20px);
     width: 260px;
-    max-height: calc(100vh - 140px);
+    max-height: calc(100vh - var(--header-height) - 60px);
     overflow-y: auto;
     z-index: 10;
   }
@@ -105,4 +156,58 @@
 
 .share-buttons a:hover {
   color: var(--primary);
+}
+
+/* ===========================================
+   Archive collapsible year/month
+   =========================================== */
+.archive-year details,
+.archive-month details {
+  border: none;
+}
+
+.archive-year > details > summary,
+.archive-month > details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.archive-year > details > summary::-webkit-details-marker,
+.archive-month > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.archive-year > details > summary::marker,
+.archive-month > details > summary::marker {
+  display: none;
+  content: "";
+}
+
+.archive-year-header h2,
+.archive-month-header h3 {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+.archive-year-header h2::before {
+  content: "▶";
+  font-size: 0.6em;
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+
+.archive-year > details[open] > summary h2::before {
+  transform: rotate(90deg);
+}
+
+.archive-month-header h3::before {
+  content: "▸";
+  font-size: 0.6em;
+  margin-right: 6px;
+  transition: transform 0.2s;
+}
+
+.archive-month > details[open] > summary h3::before {
+  transform: rotate(90deg);
 }

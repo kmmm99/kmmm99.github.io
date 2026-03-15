@@ -1,0 +1,89 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>
+    {{ .Title }}
+    {{- if (.Param "ShowRssButtonInSectionTermList") }}
+    {{- $rss := (.OutputFormats.Get "rss") }}
+    {{- if (eq .Kind `page`) }}
+    {{- $rss = (.Parent.OutputFormats.Get "rss") }}
+    {{- end }}
+    {{- with $rss }}
+    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+    {{- end }}
+    {{- end }}
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- if site.Params.ShowAllPagesInArchive }}
+{{- $pages = site.RegularPages }}
+{{- end }}
+
+{{- $monthNames := dict "January" "1月" "February" "2月" "March" "3月" "April" "4月" "May" "5月" "June" "6月" "July" "7月" "August" "8月" "September" "9月" "October" "10月" "November" "11月" "December" "12月" }}
+
+{{- range $yearIdx, $yearGroup := $pages.GroupByPublishDate "2006" }}
+{{- if ne .Key "0001" }}
+{{- $year := replace .Key "0001" "" }}
+<div class="archive-year">
+  <details{{ if eq $yearIdx 0 }} open{{ end }}>
+    <summary class="archive-year-header">
+      <h2 id="{{ $year }}">
+        {{- $year -}}
+        <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
+      </h2>
+    </summary>
+    {{- range $monthIdx, $monthGroup := .Pages.GroupByDate "January" }}
+    <div class="archive-month">
+      <details{{ if and (eq $yearIdx 0) (eq $monthIdx 0) }} open{{ end }}>
+        <summary class="archive-month-header">
+          <h3 id="{{ $year }}-{{ .Key }}">
+            {{- index $monthNames .Key | default .Key -}}
+            <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
+          </h3>
+        </summary>
+        <div class="archive-posts">
+          {{- range .Pages }}
+          {{- if eq .Kind "page" }}
+          <div class="archive-entry">
+            <h3 class="archive-entry-title entry-hint-parent">
+              {{- .Title | markdownify }}
+              {{- if .Draft }}
+              <span class="entry-hint" title="Draft">
+                <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 -960 960 960" fill="currentColor">
+                  <path
+                    d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+                </svg>
+              </span>
+              {{- end }}
+            </h3>
+            <div class="archive-meta">
+              {{- partial "post_meta.html" . -}}
+            </div>
+            <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+          </div>
+          {{- end }}
+          {{- end }}
+        </div>
+      </details>
+    </div>
+    {{- end }}
+  </details>
+</div>
+{{- end }}
+{{- end }}
+
+{{- end }}{{/* end main */}}
