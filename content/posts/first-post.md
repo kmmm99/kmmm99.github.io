@@ -9,9 +9,7 @@ description: "ブログを開設しました。"
 初めまして。massanと申します。
 よろしくお願いします。
 
-基本的な情報はXをご覧ください
-
-https://x.com/massan_mrk
+基本的な情報は[X](https://x.com/massan_mrk)をご覧ください。
 
 ## はじめに
 
