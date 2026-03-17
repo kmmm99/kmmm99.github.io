@@ -16,22 +16,22 @@ body,
    =========================================== */
 [data-theme="light"] body {
   background:
-    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(220, 40, 40, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(30, 160, 60, 0.38) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 40, 60, 0.30) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(40, 180, 80, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(180, 60, 70, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(220, 40, 40, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(30, 160, 60, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 40, 60, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(40, 180, 80, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(180, 60, 70, 0.05) 0%, transparent 60%),
     var(--theme);
   background-attachment: fixed;
 }
 
 [data-theme="dark"] body {
   background:
-    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(200, 200, 200, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(170, 170, 170, 0.38) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 200, 200, 0.30) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(170, 170, 170, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(200, 200, 200, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(200, 200, 200, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(170, 170, 170, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 200, 200, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(170, 170, 170, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(200, 200, 200, 0.02) 0%, transparent 60%),
     var(--theme);
   background-attachment: fixed;
 }
@@ -41,22 +41,22 @@ body,
    =========================================== */
 [data-theme="light"] body.list {
   background:
-    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(220, 40, 40, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(30, 160, 60, 0.38) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 40, 60, 0.30) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(40, 180, 80, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(180, 60, 70, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(220, 40, 40, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(30, 160, 60, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 40, 60, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(40, 180, 80, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(180, 60, 70, 0.05) 0%, transparent 60%),
     var(--theme) !important;
   background-attachment: fixed !important;
 }
 
 [data-theme="dark"] body.list {
   background:
-    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(200, 200, 200, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(170, 170, 170, 0.38) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 200, 200, 0.30) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(170, 170, 170, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(200, 200, 200, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(200, 200, 200, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(170, 170, 170, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 75% 80%, rgba(200, 200, 200, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 20% 85%, rgba(170, 170, 170, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 40% at 50% 50%, rgba(200, 200, 200, 0.02) 0%, transparent 60%),
     var(--theme) !important;
   background-attachment: fixed !important;
 }
