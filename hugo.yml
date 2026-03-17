@@ -2,6 +2,7 @@ baseURL: "https://kmmm99.github.io/"
 languageCode: ja
 title: "massan’s Daily Notes"
 theme: "PaperMod"
+buildFuture: true
 pagination:
   pagerSize: 5
 
