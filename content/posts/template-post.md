@@ -1,9 +1,7 @@
 ---
-title: "記事タイトルをここに書く"
-date: 2026-03-18
+title: "記事テンプレートです"
+date: 2026-03-15
 author: "massan"
-tags: ["テンプレート", "書き方"]
-description: "この記事はブログ記事のテンプレートです。新しい記事を書くときにコピーして使ってください。"
 draft: false
 # cover:
 #   image: "images/cover.jpg"
