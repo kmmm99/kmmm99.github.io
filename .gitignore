@@ -1,3 +1,5 @@
-public/
-.hugo_build.lock
-.trash/
+public/
+.hugo_build.lock
+.trash/
+content/posts/temp.md
+content/posts/template-post.md
