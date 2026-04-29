@@ -1,7 +1,8 @@
 ---
 title: "xxx"
-date: yyyy-mm-dd
+date: 2026-04-29
 author: "massan"
+draft: true
 # cover:
 #   image: "images/cover.jpg"
 #   alt: "カバー画像の説明"
