@@ -9,7 +9,7 @@ pagination:
 params:
   defaultTheme: light
   disableThemeToggle: false
-  ShowReadingTime: true
+  ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
