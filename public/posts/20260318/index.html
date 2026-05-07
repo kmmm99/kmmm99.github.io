@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="light">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>色々ありましたね | massan’s Daily Notes</title>
+<meta name="keywords" content="日記, NVIDIA, GTC_2026, AI">
+<meta name="description" content="雑記みたいな形で書き込んでいきますよ。
+NVIDIA GTC 2026
+NVIDIAのイベント、前日にオンライン視聴で申し込み
+日本時間深夜3時から生で観ました。前日21時寝です。
+ハード回りあまり詳しくないという事、全体的に超次元な話であること基本英語なので(meet使って翻訳しながらみていたものの)、革ジャンCEOのパワーを貰いに来ました。
+NVIDIA Vera RubinやGroq 3 LPUなどもありましたがこれらは超次元過ぎてイマイチピンと来なかった印象。後々ニュースで知りましたが、今回の革ジャンCEOのOpenClawの推しているみたいで、NVIDIA製OpenClawライクの「Nemoclaw」もありました。
+セキュアな環境でOpenClawを使えるとのことですが触っていないので何とも、、、中国のように青空OpenClaw教室にはならないかもですが、これから日本でも企業のユースケースが増えそうですね。（これだけ流行っているんだから）
+美しい設計を毎度作る必要はあるのか？
+すごーく単純な内容でもセキュリティ担保の為に整備性、拡張性を考慮した設計で作る事が多いですが、恐らくエンジニア経験がない人って美しい設計だの保守性拡張性とか考えず  すぐ作ってはすぐリリースする気がして（あくまで個人の偏見ですが）むしろその方が現代のサイクル的に合致しているのでは？ と思ってきました。
+「美しい設計」とか言ってセキュリティガー拡張性ガーとか言って余計なことやり続けた結果フットワークが重くなっている自分がいるなーと。どっちも正解でどっちも間違っていると思うから、どちらかに偏るしかないんでしょうけど、、、後々考えたらいまが動けばそれでいい的な発送にはなり辛いですね、、、とはいえ、とりあえず「動くこと」「動かすこと」はもっと優先していこうかなとは思います。
+みなさんのバイブで作ったもモノのリリース速度に比べると「自分は作業が遅いなあ！」
+と感じた次第です！
+スレスパ2面白い
+最近ずっとやってますね「Slay the Spire 2」
+キリのいいタイミングで終わるのがいいなー。
+">
+<meta name="author" content="massan">
+<link rel="canonical" href="http://localhost:1313/posts/20260318/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6331eab27b4774f5659f2163700eb9389be125a97f3644460dee401f45960bde.css" integrity="sha256-YzHqsntHdPVlnyFjcA65OJvhJal/NkRGDe5AH0WWC94=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/20260318/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/posts/20260318/">
+  <meta property="og:site_name" content="massan’s Daily Notes">
+  <meta property="og:title" content="色々ありましたね">
+  <meta property="og:description" content="雑記みたいな形で書き込んでいきますよ。
+NVIDIA GTC 2026 NVIDIAのイベント、前日にオンライン視聴で申し込み 日本時間深夜3時から生で観ました。前日21時寝です。
+ハード回りあまり詳しくないという事、全体的に超次元な話であること基本英語なので(meet使って翻訳しながらみていたものの)、革ジャンCEOのパワーを貰いに来ました。
+NVIDIA Vera RubinやGroq 3 LPUなどもありましたがこれらは超次元過ぎてイマイチピンと来なかった印象。後々ニュースで知りましたが、今回の革ジャンCEOのOpenClawの推しているみたいで、NVIDIA製OpenClawライクの「Nemoclaw」もありました。
+セキュアな環境でOpenClawを使えるとのことですが触っていないので何とも、、、中国のように青空OpenClaw教室にはならないかもですが、これから日本でも企業のユースケースが増えそうですね。（これだけ流行っているんだから）
+美しい設計を毎度作る必要はあるのか？ すごーく単純な内容でもセキュリティ担保の為に整備性、拡張性を考慮した設計で作る事が多いですが、恐らくエンジニア経験がない人って美しい設計だの保守性拡張性とか考えず すぐ作ってはすぐリリースする気がして（あくまで個人の偏見ですが）むしろその方が現代のサイクル的に合致しているのでは？ と思ってきました。
+「美しい設計」とか言ってセキュリティガー拡張性ガーとか言って余計なことやり続けた結果フットワークが重くなっている自分がいるなーと。どっちも正解でどっちも間違っていると思うから、どちらかに偏るしかないんでしょうけど、、、後々考えたらいまが動けばそれでいい的な発送にはなり辛いですね、、、とはいえ、とりあえず「動くこと」「動かすこと」はもっと優先していこうかなとは思います。
+みなさんのバイブで作ったもモノのリリース速度に比べると「自分は作業が遅いなあ！」 と感じた次第です！
+スレスパ2面白い 最近ずっとやってますね「Slay the Spire 2」
+キリのいいタイミングで終わるのがいいなー。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-18T00:00:00+00:00">
+    <meta property="article:tag" content="日記">
+    <meta property="article:tag" content="NVIDIA">
+    <meta property="article:tag" content="GTC_2026">
+    <meta property="article:tag" content="AI">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="色々ありましたね">
+  <meta name="twitter:description" content="雑記みたいな形で書き込んでいきますよ。
+NVIDIA GTC 2026 NVIDIAのイベント、前日にオンライン視聴で申し込み 日本時間深夜3時から生で観ました。前日21時寝です。
+ハード回りあまり詳しくないという事、全体的に超次元な話であること基本英語なので(meet使って翻訳しながらみていたものの)、革ジャンCEOのパワーを貰いに来ました。
+NVIDIA Vera RubinやGroq 3 LPUなどもありましたがこれらは超次元過ぎてイマイチピンと来なかった印象。後々ニュースで知りましたが、今回の革ジャンCEOのOpenClawの推しているみたいで、NVIDIA製OpenClawライクの「Nemoclaw」もありました。
+セキュアな環境でOpenClawを使えるとのことですが触っていないので何とも、、、中国のように青空OpenClaw教室にはならないかもですが、これから日本でも企業のユースケースが増えそうですね。（これだけ流行っているんだから）
+美しい設計を毎度作る必要はあるのか？ すごーく単純な内容でもセキュリティ担保の為に整備性、拡張性を考慮した設計で作る事が多いですが、恐らくエンジニア経験がない人って美しい設計だの保守性拡張性とか考えず すぐ作ってはすぐリリースする気がして（あくまで個人の偏見ですが）むしろその方が現代のサイクル的に合致しているのでは？ と思ってきました。
+「美しい設計」とか言ってセキュリティガー拡張性ガーとか言って余計なことやり続けた結果フットワークが重くなっている自分がいるなーと。どっちも正解でどっちも間違っていると思うから、どちらかに偏るしかないんでしょうけど、、、後々考えたらいまが動けばそれでいい的な発送にはなり辛いですね、、、とはいえ、とりあえず「動くこと」「動かすこと」はもっと優先していこうかなとは思います。
+みなさんのバイブで作ったもモノのリリース速度に比べると「自分は作業が遅いなあ！」 と感じた次第です！
+スレスパ2面白い 最近ずっとやってますね「Slay the Spire 2」
+キリのいいタイミングで終わるのがいいなー。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "色々ありましたね",
+      "item": "http://localhost:1313/posts/20260318/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "色々ありましたね",
+  "name": "色々ありましたね",
+  "description": "雑記みたいな形で書き込んでいきますよ。\nNVIDIA GTC 2026 NVIDIAのイベント、前日にオンライン視聴で申し込み 日本時間深夜3時から生で観ました。前日21時寝です。\nハード回りあまり詳しくないという事、全体的に超次元な話であること基本英語なので(meet使って翻訳しながらみていたものの)、革ジャンCEOのパワーを貰いに来ました。\nNVIDIA Vera RubinやGroq 3 LPUなどもありましたがこれらは超次元過ぎてイマイチピンと来なかった印象。後々ニュースで知りましたが、今回の革ジャンCEOのOpenClawの推しているみたいで、NVIDIA製OpenClawライクの「Nemoclaw」もありました。\nセキュアな環境でOpenClawを使えるとのことですが触っていないので何とも、、、中国のように青空OpenClaw教室にはならないかもですが、これから日本でも企業のユースケースが増えそうですね。（これだけ流行っているんだから）\n美しい設計を毎度作る必要はあるのか？ すごーく単純な内容でもセキュリティ担保の為に整備性、拡張性を考慮した設計で作る事が多いですが、恐らくエンジニア経験がない人って美しい設計だの保守性拡張性とか考えず すぐ作ってはすぐリリースする気がして（あくまで個人の偏見ですが）むしろその方が現代のサイクル的に合致しているのでは？ と思ってきました。\n「美しい設計」とか言ってセキュリティガー拡張性ガーとか言って余計なことやり続けた結果フットワークが重くなっている自分がいるなーと。どっちも正解でどっちも間違っていると思うから、どちらかに偏るしかないんでしょうけど、、、後々考えたらいまが動けばそれでいい的な発送にはなり辛いですね、、、とはいえ、とりあえず「動くこと」「動かすこと」はもっと優先していこうかなとは思います。\nみなさんのバイブで作ったもモノのリリース速度に比べると「自分は作業が遅いなあ！」 と感じた次第です！\nスレスパ2面白い 最近ずっとやってますね「Slay the Spire 2」\nキリのいいタイミングで終わるのがいいなー。\n",
+  "keywords": [
+    "日記", "NVIDIA", "GTC_2026", "AI"
+  ],
+  "articleBody": "雑記みたいな形で書き込んでいきますよ。\nNVIDIA GTC 2026 NVIDIAのイベント、前日にオンライン視聴で申し込み 日本時間深夜3時から生で観ました。前日21時寝です。\nハード回りあまり詳しくないという事、全体的に超次元な話であること基本英語なので(meet使って翻訳しながらみていたものの)、革ジャンCEOのパワーを貰いに来ました。\nNVIDIA Vera RubinやGroq 3 LPUなどもありましたがこれらは超次元過ぎてイマイチピンと来なかった印象。後々ニュースで知りましたが、今回の革ジャンCEOのOpenClawの推しているみたいで、NVIDIA製OpenClawライクの「Nemoclaw」もありました。\nセキュアな環境でOpenClawを使えるとのことですが触っていないので何とも、、、中国のように青空OpenClaw教室にはならないかもですが、これから日本でも企業のユースケースが増えそうですね。（これだけ流行っているんだから）\n美しい設計を毎度作る必要はあるのか？ すごーく単純な内容でもセキュリティ担保の為に整備性、拡張性を考慮した設計で作る事が多いですが、恐らくエンジニア経験がない人って美しい設計だの保守性拡張性とか考えず すぐ作ってはすぐリリースする気がして（あくまで個人の偏見ですが）むしろその方が現代のサイクル的に合致しているのでは？ と思ってきました。\n「美しい設計」とか言ってセキュリティガー拡張性ガーとか言って余計なことやり続けた結果フットワークが重くなっている自分がいるなーと。どっちも正解でどっちも間違っていると思うから、どちらかに偏るしかないんでしょうけど、、、後々考えたらいまが動けばそれでいい的な発送にはなり辛いですね、、、とはいえ、とりあえず「動くこと」「動かすこと」はもっと優先していこうかなとは思います。\nみなさんのバイブで作ったもモノのリリース速度に比べると「自分は作業が遅いなあ！」 と感じた次第です！\nスレスパ2面白い 最近ずっとやってますね「Slay the Spire 2」\nキリのいいタイミングで終わるのがいいなー。\n",
+  "wordCount" : "26",
+  "inLanguage": "en",
+  "datePublished": "2026-03-18T00:00:00Z",
+  "dateModified": "2026-03-18T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "massan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/20260318/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "massan’s Daily Notes",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="massan’s Daily Notes (Alt + H)">massan’s Daily Notes</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="検索 (Alt &#43; /)" accesskey=/>
+                    <span>検索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="アーカイブ">
+                    <span>アーカイブ</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="タグ">
+                    <span>タグ</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<aside class="toc-sidebar">
+  <nav class="toc-sidebar-inner">
+    <h2 class="toc-sidebar-title">目次</h2><nav id="TableOfContents">
+  <ul>
+    <li><a href="#nvidia-gtc-2026">NVIDIA GTC 2026</a></li>
+    <li><a href="#美しい設計を毎度作る必要はあるのか">美しい設計を毎度作る必要はあるのか？</a>
+      <ul>
+        <li><a href="#スレスパ2面白い">スレスパ2面白い</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+</aside>
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">ホーム</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      色々ありましたね
+    </h1>
+    <div class="post-meta"><span title='2026-03-18 00:00:00 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;<span>massan</span>
+
+</div>
+  </header> 
+
+  
+  <div class="toc-mobile"><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#nvidia-gtc-2026">NVIDIA GTC 2026</a></li>
+    <li><a href="#美しい設計を毎度作る必要はあるのか">美しい設計を毎度作る必要はあるのか？</a>
+      <ul>
+        <li><a href="#スレスパ2面白い">スレスパ2面白い</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  </div>
+  <div class="post-content"><p>雑記みたいな形で書き込んでいきますよ。</p>
+<h2 id="nvidia-gtc-2026">NVIDIA GTC 2026<a hidden class="anchor" aria-hidden="true" href="#nvidia-gtc-2026">#</a></h2>
+<p>NVIDIAのイベント、前日にオンライン視聴で申し込み
+日本時間深夜3時から生で観ました。前日21時寝です。</p>
+<p>ハード回りあまり詳しくないという事、全体的に超次元な話であること基本英語なので(meet使って翻訳しながらみていたものの)、革ジャンCEOのパワーを貰いに来ました。</p>
+<p><a href="https://www.itmedia.co.jp/news/articles/2603/17/news059.html">NVIDIA Vera RubinやGroq 3 LPU</a>などもありましたがこれらは超次元過ぎてイマイチピンと来なかった印象。後々ニュースで知りましたが、今回の革ジャンCEOのOpenClawの推しているみたいで、NVIDIA製OpenClawライクの「<a href="https://www.nvidia.com/en-us/ai/nemoclaw/">Nemoclaw</a>」もありました。</p>
+<p>セキュアな環境でOpenClawを使えるとのことですが触っていないので何とも、、、中国のように青空OpenClaw教室にはならないかもですが、これから日本でも企業のユースケースが増えそうですね。（これだけ流行っているんだから）</p>
+<h2 id="美しい設計を毎度作る必要はあるのか">美しい設計を毎度作る必要はあるのか？<a hidden class="anchor" aria-hidden="true" href="#美しい設計を毎度作る必要はあるのか">#</a></h2>
+<p>すごーく単純な内容でもセキュリティ担保の為に整備性、拡張性を考慮した設計で作る事が多いですが、恐らくエンジニア経験がない人って美しい設計だの保守性拡張性とか考えず  すぐ作ってはすぐリリースする気がして（あくまで個人の偏見ですが）むしろその方が現代のサイクル的に合致しているのでは？ と思ってきました。</p>
+<p>「美しい設計」とか言ってセキュリティガー拡張性ガーとか言って余計なことやり続けた結果フットワークが重くなっている自分がいるなーと。どっちも正解でどっちも間違っていると思うから、どちらかに偏るしかないんでしょうけど、、、後々考えたらいまが動けばそれでいい的な発送にはなり辛いですね、、、とはいえ、とりあえず「動くこと」「動かすこと」はもっと優先していこうかなとは思います。</p>
+<p>みなさんのバイブで作ったもモノのリリース速度に比べると「自分は作業が遅いなあ！」
+と感じた次第です！</p>
+<h3 id="スレスパ2面白い">スレスパ2面白い<a hidden class="anchor" aria-hidden="true" href="#スレスパ2面白い">#</a></h3>
+<p>最近ずっとやってますね「Slay the Spire 2」<br>
+キリのいいタイミングで終わるのがいいなー。</p>
+<iframe src="https://store.steampowered.com/widget/2868840/" frameborder="0" width="646" height="190"></iframe>  
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E6%97%A5%E8%A8%98/">日記</a></li>
+      <li><a href="http://localhost:1313/tags/nvidia/">NVIDIA</a></li>
+      <li><a href="http://localhost:1313/tags/gtc_2026/">GTC_2026</a></li>
+      <li><a href="http://localhost:1313/tags/ai/">AI</a></li>
+    </ul>
+
+<div class="share-buttons">
+  
+  <a target="_blank" rel="noopener noreferrer" aria-label="share 色々ありましたね on X"
+    href="https://x.com/intent/tweet/?text=%e8%89%b2%e3%80%85%e3%81%82%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f%e3%81%ad&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f20260318%2f">
+    <svg viewBox="0 0 24 24" height="24px" width="24px" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+  </a>
+  
+  <a target="_blank" rel="noopener noreferrer" aria-label="share 色々ありましたね on Misskey"
+    href="https://misskey.io/share?text=%e8%89%b2%e3%80%85%e3%81%82%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f%e3%81%ad%20http%3a%2f%2flocalhost%3a1313%2fposts%2f20260318%2f">
+    <svg viewBox="140 140 650 490" height="24px" width="24px" fill="currentColor">
+      <path d="M256.418,188.976C248.558,188.944 240.758,190.308 233.379,193.013C220.308,197.613 209.533,205.888 201.091,217.802C193.02,229.329 188.977,242.195 188.977,256.409L188.977,508.89C188.977,527.332 195.52,543.29 208.576,556.732C222.032,569.803 237.99,576.331 256.418,576.331C275.259,576.331 291.204,569.803 304.274,556.747C317.73,543.291 324.441,527.332 324.441,508.89L324.441,462.983C324.584,453.04 334.824,455.655 340.01,462.983C349.691,479.76 372.36,494.119 394.193,494.119C416.026,494.119 438.005,482.196 448.375,462.983C452.304,458.354 463.377,450.455 464.52,462.983L464.52,508.89C464.52,527.332 471.047,543.29 484.104,556.732C497.574,569.803 513.511,576.331 531.953,576.331C550.78,576.331 566.739,569.803 579.809,556.747C593.265,543.291 599.977,527.332 599.977,508.89L599.977,256.409C599.977,242.195 595.752,229.329 587.309,217.802C579.224,205.874 568.653,197.613 555.597,193.013C547.912,190.314 540.228,188.976 532.543,188.976C511.788,188.976 494.301,197.046 480.073,213.188L411.636,293.281C410.107,294.438 405.006,303.247 394.178,303.247C383.379,303.247 378.868,294.439 377.325,293.296L308.297,213.188C294.47,197.046 277.173,188.976 256.418,188.976ZM682.904,188.983C666.763,188.983 652.926,194.748 641.404,206.271C630.261,217.413 624.691,231.054 624.691,247.196C624.691,263.338 630.261,277.174 641.404,288.697C652.926,299.839 666.763,305.41 682.904,305.41C699.046,305.41 712.88,299.839 724.412,288.697C735.935,277.174 741.693,263.338 741.693,247.196C741.693,231.054 735.935,217.413 724.412,206.271C712.88,194.748 699.046,188.983 682.904,188.983ZM683.473,316.947C667.331,316.947 653.495,322.713 641.972,334.236C630.449,345.768 624.691,359.602 624.691,375.744L624.691,518.118C624.691,534.259 630.449,548.095 641.972,559.618C653.504,570.761 667.341,576.331 683.473,576.331C699.624,576.331 713.27,570.761 724.412,559.618C735.935,548.095 741.693,534.259 741.693,518.118L741.693,375.744C741.693,359.593 735.935,345.759 724.412,334.236C713.261,322.713 699.614,316.947 683.473,316.947Z"/>
+    </svg>
+  </a>
+  
+  <a target="_blank" rel="noopener noreferrer" aria-label="share 色々ありましたね on Bluesky"
+    href="https://bsky.app/intent/compose?text=%e8%89%b2%e3%80%85%e3%81%82%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f%e3%81%ad%20http%3a%2f%2flocalhost%3a1313%2fposts%2f20260318%2f">
+    <svg viewBox="0 0 600 530" height="24px" width="24px" fill="currentColor">
+      <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.72 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+    </svg>
+  </a>
+  <button class="share-copy-button" type="button" aria-label="copy link to clipboard" title="リンクをコピー"
+    data-copy-url="http://localhost:1313/posts/20260318/">
+    <svg viewBox="0 0 24 24" height="24px" width="24px" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07l-1.62 1.62"/>
+      <path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07l1.62-1.62"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  (() => {
+    const copyButtons = document.querySelectorAll(".share-copy-button");
+
+    const fallbackCopy = (text) => {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      textarea.remove();
+    };
+
+    copyButtons.forEach((button) => {
+      button.addEventListener("click", async () => {
+        const url = button.dataset.copyUrl;
+
+        try {
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(url);
+          } else {
+            fallbackCopy(url);
+          }
+        } catch {
+          fallbackCopy(url);
+        }
+
+        button.title = "コピーしました";
+        button.setAttribute("aria-label", "copied link to clipboard");
+        window.setTimeout(() => {
+          button.title = "リンクをコピー";
+          button.setAttribute("aria-label", "copy link to clipboard");
+        }, 1600);
+      });
+    });
+  })();
+</script>
+
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/20260429/">
+    <span class="title">« 前へ</span>
+    <br>
+    <span>昨日のイベントとブログを書くべきだなと思ったこと</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/first-post/">
+    <span class="title">次へ »</span>
+    <br>
+    <span>最初のブログ記事</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">massan’s Daily Notes</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'コピー';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'コピーされました!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'コピー';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
